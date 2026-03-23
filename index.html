@@ -757,9 +757,11 @@ footer {
 <footer>
   <div class="footer-logo"><span>WORK</span>SPACE</div>
   <div class="footer-copy">© 2025 WorkSpace Analytics. Crafted with data &amp; design.</div>
+  <div class="footer-copy" style="color:var(--muted);">&#128205; Manchester, UK</div>
+  <div class="footer-copy"><a href="mailto:tunjiologun.mail@gmail.com" style="color:var(--cyan);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">tunjiologun.mail@gmail.com</a></div>
   <div class="footer-socials">
-    <a class="social-btn" href="#" title="LinkedIn">in</a>
-    <a class="social-btn" href="#" title="GitHub">gh</a>
+    <a class="social-btn" href="https://www.linkedin.com/in/tunji-ologun-0b558576/" title="LinkedIn">in</a>
+    <a class="social-btn" href="https://github.com/gatemediang" title="GitHub">gh</a>
     <a class="social-btn" href="#" title="Twitter/X">𝕏</a>
   </div>
 </footer>
@@ -894,7 +896,7 @@ function submitForm(){
   .then(res => {
     if(res.success){
       msg.className='form-msg success';
-      msg.textContent='✓ Message sent! I’ll be in touch within 24 hours.';
+      msg.textContent="✓ Message sent! I'll be in touch within 24 hours.";
       ['fname','lname','email','subject','message'].forEach(id => document.getElementById(id).value='');
     } else {
       msg.className='form-msg error'; msg.textContent='Something went wrong. Please try again.';
