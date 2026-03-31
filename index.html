@@ -379,8 +379,17 @@ footer {
 .social-btn:hover { border-color:var(--cyan); background:var(--cyan-dim); }
 
 /* ─── REVEAL ANIMATIONS ───────────────────────────────── */
-.reveal { opacity:0; transform:translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(28px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.reveal { 
+  animation: fadeInUp 0.7s ease forwards;
+  animation-play-state: paused;
+}
+.reveal.visible { 
+  animation-play-state: running;
+}
 
 /* ─── SCROLL TO TOP ───────────────────────────────────── */
 #top-btn {
