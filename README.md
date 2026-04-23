@@ -2,7 +2,7 @@
 
 
 <a href="https://gatemediang.github.io/DataAnalyst-Scientist/" target="_blank">
-  <img src="https://img.shields.io/badge/✅ View App-Online-green?style=for-the-badge" alt="View App"/>
+  <img src="https://img.shields.io/badge/✅ View Portfolio Website-Online-green?style=for-the-badge" alt="View App"/>
 </a>
 
 
