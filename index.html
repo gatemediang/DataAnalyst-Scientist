@@ -269,6 +269,219 @@ section { position: relative; }
 .tech-logo-icon { font-size:2.2rem; }
 .tech-logo-name { font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
 
+/* ─── CERTIFICATIONS ─────────────────────────────────── */
+#certifications {
+  padding:100px 5%;
+  background: linear-gradient(180deg, var(--bg-mid) 0%, var(--bg-deep) 100%);
+}
+.cert-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1.5rem;
+}
+.cert-card {
+  background:rgba(6,16,31,0.92);
+  border:1px solid rgba(0,212,255,0.14);
+  border-radius:18px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:360px;
+  transition:transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  backdrop-filter:blur(14px);
+}
+.cert-card:hover {
+  transform:translateY(-6px);
+  border-color:var(--cyan);
+  box-shadow:0 10px 52px rgba(0,212,255,0.16);
+}
+.cert-thumb {
+  flex:1;
+  min-height:255px;
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,212,255,0.08), transparent 40%),
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+.cert-footer {
+  min-height:78px;
+  padding:18px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:var(--font-head);
+  font-size:1rem;
+  font-weight:700;
+  line-height:1.3;
+  color:var(--white);
+  border-top:1px solid rgba(0,212,255,0.14);
+  background:rgba(3,12,24,0.8);
+}
+.cert-shield {
+  width:min(74%, 250px);
+  aspect-ratio:1 / 1.18;
+  border-radius:24px 24px 38px 38px;
+  border:4px solid rgba(255,255,255,0.22);
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255,255,255,0.18), transparent 26%),
+    linear-gradient(180deg, rgba(255,255,255,0.16), rgba(7,11,18,0.98) 42%, rgba(6,16,31,0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.16),
+    0 20px 40px rgba(0,0,0,0.4);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+  position:relative;
+}
+.cert-shield::after {
+  content:'';
+  position:absolute;
+  inset:10px;
+  border-radius:18px 18px 30px 30px;
+  border:1px solid rgba(255,255,255,0.08);
+  pointer-events:none;
+}
+.cert-shield .brand {
+  font-size:0.76rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.75);
+}
+.cert-shield .title {
+  font-family:var(--font-head);
+  font-size:1.24rem;
+  font-weight:700;
+  line-height:0.92;
+}
+.cert-shield .sub {
+  font-size:0.68rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:rgba(232,240,255,0.72);
+}
+.cert-shield .small {
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:0.82rem;
+  border:2px solid currentColor;
+}
+.cert-shield .shield-star {
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  border:1px solid currentColor;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.9rem;
+  line-height:1;
+}
+.cert-shield::before {
+  content:'';
+  position:absolute;
+  bottom:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:0;
+  border-left:36px solid transparent;
+  border-right:36px solid transparent;
+  border-top:28px solid rgba(6,16,31,0.98);
+  filter:drop-shadow(0 12px 18px rgba(0,0,0,0.28));
+}
+.cert-shield--gh { color:#8be0a8; }
+.cert-shield--gh .title { font-size:1.42rem; }
+.cert-shield--gh .brand { color:rgba(255,255,255,0.8); }
+.cert-shield--gh .small { width:28px; height:28px; border:none; font-size:1.05rem; opacity:0.5; }
+.cert-shield--ai900 { color:#7eb7ff; }
+.cert-shield--ai900 .brand { color:#8fb3ff; }
+.cert-shield--ai900 .badge-ring {
+  position:absolute;
+  inset:20px 18px auto auto;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  border:1px dashed rgba(255,255,255,0.28);
+  opacity:0.65;
+}
+.cert-shield--ai900 .badge-ring::before,
+.cert-shield--ai900 .badge-ring::after {
+  content:'';
+  position:absolute;
+  inset:16px;
+  border-radius:50%;
+  border:1px dashed rgba(255,255,255,0.2);
+}
+.cert-shield--ai900 .badge-ring::after {
+  inset:32px;
+}
+.cert-shield--dp600 { color:#46b7ff; }
+.cert-shield--dp600 .brand { color:#7cc7ff; }
+.cert-banner {
+  width:100%;
+  height:100%;
+  border-radius:10px;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:linear-gradient(90deg, rgba(8,21,41,0.9), rgba(12,29,52,0.9));
+  border:1px solid rgba(255,255,255,0.04);
+}
+.cert-banner .square {
+  width:66px;
+  height:66px;
+  border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:0.66rem;
+  line-height:1.1;
+  font-weight:700;
+  color:rgba(255,255,255,0.9);
+  border:1px solid currentColor;
+  flex-shrink:0;
+}
+.cert-banner .copy {
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.cert-banner .copy strong {
+  font-size:1.04rem;
+  line-height:1.1;
+}
+.cert-banner .copy span {
+  font-size:0.62rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:rgba(232,240,255,0.56);
+}
+.cert-banner--engineer .square { color:#ffcf2a; }
+.cert-banner--scientist .square { color:#6fa8ff; }
+.cert-banner--analyst .square { color:#9bbcff; }
+.cert-banner--ai .square { color:#ff6b6b; }
+.cert-banner--engineer .copy strong,
+.cert-banner--scientist .copy strong,
+.cert-banner--analyst .copy strong,
+.cert-banner--ai .copy strong { color:#eef7ff; }
+
 /* ─── PROJECTS ─────────────────────────────────────────── */
 #projects {
   padding:100px 5%;
@@ -410,10 +623,12 @@ footer {
   .nav-links{display:none;}
   .hamburger{display:flex;}
   .form-row{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 @media(max-width:600px){
   .projects-grid{grid-template-columns:1fr;}
   .about-stats{grid-template-columns:1fr 1fr;}
+  .cert-grid{grid-template-columns:1fr;}
 }
 
 /* glow line decoration */
@@ -441,6 +656,7 @@ footer {
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#techstack">Tech</a>
+    <a href="#certifications">Certifications</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="nav-cta">Hire Me</a>
@@ -455,6 +671,7 @@ footer {
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#skills" onclick="closeMobile()">Skills</a>
   <a href="#techstack" onclick="closeMobile()">Tech Stack</a>
+  <a href="#certifications" onclick="closeMobile()">Certifications</a>
   <a href="#projects" onclick="closeMobile()">Projects</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
@@ -608,11 +825,143 @@ footer {
   </div>
 </section>
 
+<!-- ═══ CERTIFICATIONS ══════════════════════════════════ -->
+<section id="certifications">
+  <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 3.5rem;">
+    <span class="glow-line" style="margin:0 auto 1.5rem;"></span>
+    <div class="sec-label">004 / Certifications</div>
+    <h2 class="sec-title">Certification <em>Showcase</em></h2>
+    <p class="sec-desc" style="margin:0 auto;">A selection of certifications that back up the tools, cloud platforms, and analytics workflows I use in client work.</p>
+  </div>
+  <div class="cert-grid">
+    <div class="cert-card reveal">
+      <div class="cert-thumb">
+        <div class="cert-shield cert-shield--gh">
+          <div class="small">⌁</div>
+          <div class="brand">GitHub</div>
+          <div class="title">Copilot</div>
+          <div class="sub">Certification Program</div>
+        </div>
+      </div>
+      <div class="cert-footer">Microsoft GH-300 Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.05s">
+      <div class="cert-thumb">
+        <div class="cert-shield cert-shield--ai900">
+          <div class="badge-ring"></div>
+          <div class="brand">Microsoft Certified</div>
+          <div class="title" style="font-size:1.14rem;line-height:1.02;">Azure AI<br/>Fundamentals</div>
+          <div class="shield-star">★</div>
+        </div>
+      </div>
+      <div class="cert-footer">Microsoft AI-900 Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.1s">
+      <div class="cert-thumb">
+        <div class="cert-shield cert-shield--dp600">
+          <div class="brand">Microsoft Certified</div>
+          <div class="title" style="font-size:1.12rem;line-height:1.05;">Fabric Analytics<br/>Engineer Associate</div>
+          <div class="sub" style="padding:7px 10px;border:1px solid currentColor;border-radius:999px;">Associate</div>
+          <div class="shield-star">★★</div>
+        </div>
+      </div>
+      <div class="cert-footer">Microsoft DP-600 Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.15s">
+      <div class="cert-thumb">
+        <div class="cert-banner cert-banner--engineer">
+          <div class="square">
+            <span style="font-size:0.95rem;line-height:1;">○</span>
+            <span style="margin-top:4px;">Data</span>
+            <span>Camp</span>
+          </div>
+          <div class="copy">
+            <strong>Data Engineer Associate</strong>
+            <span>Datacamp Certified</span>
+          </div>
+        </div>
+      </div>
+      <div class="cert-footer">Datacamp Certified Data Engineer Associate</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.02s">
+      <div class="cert-thumb">
+        <div class="cert-banner cert-banner--scientist">
+          <div class="square">
+            <span style="font-size:0.95rem;line-height:1;">○</span>
+            <span style="margin-top:4px;">Data</span>
+            <span>Camp</span>
+          </div>
+          <div class="copy">
+            <strong>Data Scientist Associate</strong>
+            <span>Datacamp Certified</span>
+          </div>
+        </div>
+      </div>
+      <div class="cert-footer">Datacamp Data Scientist Associate Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.07s">
+      <div class="cert-thumb">
+        <div class="cert-banner cert-banner--analyst">
+          <div class="square">
+            <span style="font-size:0.95rem;line-height:1;">○</span>
+            <span style="margin-top:4px;">Data</span>
+            <span>Camp</span>
+          </div>
+          <div class="copy">
+            <strong>Data Analyst Professional</strong>
+            <span>Datacamp Certified</span>
+          </div>
+        </div>
+      </div>
+      <div class="cert-footer">Datacamp Data Analyst Professional Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.12s">
+      <div class="cert-thumb">
+        <div class="cert-banner cert-banner--scientist">
+          <div class="square">
+            <span style="font-size:0.95rem;line-height:1;">○</span>
+            <span style="margin-top:4px;">Data</span>
+            <span>Camp</span>
+          </div>
+          <div class="copy">
+            <strong>Data Scientist Professional</strong>
+            <span>Datacamp Certified</span>
+          </div>
+        </div>
+      </div>
+      <div class="cert-footer">Datacamp Data Scientist Professional Certification</div>
+    </div>
+
+    <div class="cert-card reveal" style="animation-delay:0.17s">
+      <div class="cert-thumb">
+        <div class="cert-banner cert-banner--ai">
+          <div class="square">
+            <span style="font-size:0.95rem;line-height:1;">○</span>
+            <span style="margin-top:4px;">Data</span>
+            <span>Camp</span>
+          </div>
+          <div class="copy">
+            <strong>AI Engineer Associate</strong>
+            <span>Datacamp Certified</span>
+          </div>
+        </div>
+      </div>
+      <div class="cert-footer">Datacamp AI Engineer Associate Certification</div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ PROJECTS ════════════════════════════════════════ -->
 <section id="projects">
   <div class="reveal" style="max-width:600px;margin:0 auto 3.5rem;text-align:center;">
     <span class="glow-line" style="margin:0 auto 1.5rem;"></span>
-    <div class="sec-label">004 / Portfolio</div>
+    <div class="sec-label">005 / Portfolio</div>
     <h2 class="sec-title">Featured <em>Projects</em></h2>
     <p class="sec-desc" style="margin:0 auto;">A selection of data projects that delivered measurable business outcomes.</p>
   </div>
@@ -918,7 +1267,7 @@ footer {
   <div class="contact-grid">
     <div class="reveal">
       <span class="glow-line"></span>
-      <div class="sec-label">005 / Contact</div>
+      <div class="sec-label">006 / Contact</div>
       <h2 class="sec-title">Let's Work<br/><em>Together</em></h2>
       <p class="contact-info"><p>Whether you need a full analytics strategy, a Power BI overhaul, or a quick data audit — I'd love to hear about your challenge.</p></p>
       <div class="contact-detail">
